@@ -908,3 +908,16 @@ In summary, the `countPairs` method iterates over all pairs of indices in the `n
 
 <----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 #QUESTION NUMBER  : 232. Implement Queue using Stacks
+<----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+#QUESTION NUMBER  : 2610. Convert an Array Into a 2D Array With Conditions
+
+1. **Counting Frequency**: We start by creating a dictionary (`freq_map`) to count the frequency of each number in the input list `nums`. This allows us to determine the maximum frequency of any number in the list.
+
+2. **Initializing 2D Array**: We initialize an empty list `result` that will hold the rows of the 2D array. The number of rows in this array will be equal to the maximum frequency of any number in the input list.
+
+3. **Constructing Rows**: We iterate through the entries of `freq_map`, which contains the numbers and their frequencies. For each number, we iterate `freq` times (where `freq` is its frequency) and add the number to the appropriate row in `result`. We use the modulo operator (`%`) to cycle through the rows, ensuring that each row gets populated in a round-robin manner.
+
+4. **Returning Result**: After constructing the rows, we return the `result`, which represents the 2D array as described in the problem statement.
+<----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
