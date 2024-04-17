@@ -857,3 +857,23 @@ class MyQueue:
 
     def empty(self) -> bool:
         return not self.stack1 and not self.stack2
+
+#QUESTION NUMBER  : 2610. Convert an Array Into a 2D Array With Conditions
+from collections import defaultdict
+
+class Solution:
+    def findMatrix(self, nums: List[int]) -> List[List[int]]:
+        freq_map = defaultdict(int)
+        for num in nums:
+            freq_map[num] += 1
+        
+        max_freq = max(freq_map.values())
+        result = [[] for _ in range(max_freq)]
+        
+        row = 0
+        for num, freq in freq_map.items():
+            for _ in range(freq):
+                result[row % max_freq].append(num)
+                row += 1
+        
+        return result
