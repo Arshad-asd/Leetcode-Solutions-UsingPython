@@ -877,3 +877,18 @@ class Solution:
                 row += 1
         
         return result
+#QUESTION NUMBER  :  2149. Rearrange Array Elements by Sign
+class Solution:
+    def rearrangeArray(self, nums: List[int]) -> List[int]:
+        posative = []
+        negative = []
+        result = []
+        for i in range(len(nums)):
+            if nums[i] >0:
+                posative.append(nums[i])
+            else:
+                negative.append(nums[i])
+        for i in range(len(nums) // 2):
+            result.append(posative[i])
+            result.append(negative[i])
+        return result
